@@ -10,7 +10,7 @@ BuildRequires:	fftw3-devel
 BuildRequires:	ladspa-devel
 BuildRequires:	libsamplerate-devel
 BuildRequires:	libsndfile-devel
-BuildRequires:	pkgconfig
+BuildRequires:	pkg-config
 BuildRequires:	vamp-plugin-sdk-devel
 Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -58,8 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	libs -p /sbin/ldconfig
-%postun	libs -p /sbin/ldconfig
+%post	libs -p /usr/sbin/ldconfig
+%postun	libs -p /usr/sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
