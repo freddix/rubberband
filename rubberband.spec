@@ -1,11 +1,11 @@
 Summary:	Audio time-stretching and pitch-shifting library
 Name:		rubberband
-Version:	1.7.0
+Version:	1.8.1
 Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	http://code.breakfastquay.com/attachments/download/23/%{name}-%{version}.tar.bz2
-# Source0-md5:	49093923c7a48e5860a5f7db3590ac74
+# Source0-md5:	6c2b4e18a714bcc297d0db81a10f9348
 BuildRequires:	fftw3-devel
 BuildRequires:	ladspa-devel
 BuildRequires:	libsamplerate-devel
@@ -18,7 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Rubber Band is a block-based phase vocoder with phase resets
 on percussive transients, an adaptive stretch ratio between phase
-reset points, and a "lamination" method to improve vertical phase coherence.
+reset points, and a "lamination" method to improve vertical phase
+coherence.
 
 %package libs
 Summary:	rubberband library
@@ -33,7 +34,8 @@ Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description devel
-This is the package containing the header files for rubberband library.
+This is the package containing the header files for rubberband
+library.
 
 %prep
 %setup -q
